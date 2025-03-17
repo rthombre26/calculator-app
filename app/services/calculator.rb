@@ -1,6 +1,7 @@
 class Calculator
-  def add(a, b)
-    a + b
+  def add(numbers)
+    return 0 if numbers.empty?
+    numbers.split(",").map(&:to_i).sum
   end
 
   def subtract(a, b)
