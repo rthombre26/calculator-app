@@ -1,7 +1,7 @@
 class Calculator
   def add(numbers)
     return 0 if numbers.empty?
-    numbers.split(",").map(&:to_i).sum
+    numbers.split(/[\n,]/).map(&:to_i).sum
   end
 
   def subtract(a, b)
@@ -14,7 +14,6 @@ class Calculator
 
   def divide(a, b)
     raise ZeroDivisionError, "Cannot divide by zero" if b.zero?
-    
     a / b
   end
 
